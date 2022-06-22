@@ -55,6 +55,14 @@ opt_in_rules:
   - yoda_condition
 
 custom_rules:
+  block_disables:
+    name: "Block swiftlint disables"
+    regex: '(swiftlint:disable).'
+    match_kinds: comment
+    capture_group: 1
+    message: "Disabling swiftlint rules is not allowed. Incrememnt warnings count to proceed on CI/CD"
+    severity: error
+    
   array_constructor:
     name: "Array/Dictionary initializer"
     regex: '[let,var] .+ = (\[.+\]\(\))'
