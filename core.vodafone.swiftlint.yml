@@ -60,8 +60,8 @@ custom_rules:
     regex: '(swiftlint:disable).'
     match_kinds: comment
     capture_group: 1
-    message: "Disabling swiftlint rules is not allowed. Incrememnt warnings count to proceed on CI/CD"
-    severity: error
+    message: "Disabling swiftlint rules is not allowed. Incrememnt warnings count to proceed on CI/CD. This will be an error soon!"
+    severity: warning
     
   array_constructor:
     name: "Array/Dictionary initializer"
